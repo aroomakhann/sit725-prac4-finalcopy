@@ -59,6 +59,10 @@ function getAllParis(callback){
     collection.find({}).toArray(callback);
 }
 
+app.get('/favicon.ico', (req, res) => {
+    res.status(204).end();
+});
+
 app.listen(port, () => {
     console.log("App listening to: " + port);
 });
